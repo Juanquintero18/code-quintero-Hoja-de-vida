@@ -1,0 +1,77 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: rgb(0, 0, 0); /* Color de fondo del encabezado */
+    color: rgb(240, 240, 240); /* Color de texto del encabezado */
+    border: 3px solid #ffcc00;(255, 230, 0); /* Agrega un borde de 2 píxeles de ancho y color negro */
+    padding: 10px; /* Añade espacio alrededor del texto */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del logo */
+.logo-header img {
+    width: 130px; /* Ancho del logo */
+    padding-right: 20cm ;
+}
+
+/* Estilos del menú de navegación */
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-right: 20px; /* Espacio entre cada elemento del menú */
+}
+
+.nav-menu ul li a {
+    color: rgb(252, 252, 252); /* Color de los enlaces */
+    text-decoration: none; /* Quita subrayado de los enlaces */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.nav-menu ul li a:hover {
+    color: #ffcc00; /* Color al pasar el mouse sobre los enlaces */
+}
+
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+    }
+
+    .nav-menu ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(20, 20, 20);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    .nav-menu ul li {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .nav-menu ul {
+        left: 0;
+    }
